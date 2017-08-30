@@ -1,0 +1,7 @@
+<view class="area">{{address}}</view>
+<view class="area">
+<!-- image 组件 dd -->
+	<image class="typeicon" src="/resource/{{type}}.png"/>{{textType}}
+</view>
+<view class="area">{{message}}</view>
+<view class="area">{{contact}}</view>

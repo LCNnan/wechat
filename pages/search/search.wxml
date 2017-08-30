@@ -1,0 +1,19 @@
+<view class="search-box">
+<!-- 输入框组件 -->
+	<input placeholder="请输入搜索关键字" placeholder-class="placeholder" class="search-input" bindinput = "handleSearchChange"/>
+	<!-- 把view 换成 button -->
+	<view class="search-button" bindtap = "handleSearchTap">搜索</view>
+</view>
+
+<view class="search-list" wx:if = "{{hasResult}}">
+	<view class="search-item" wx:for = "{{resultList}}" wx:key = "{{index}}_searchlist" bindtap = "handleItemTap" id = "{{item.id}}">
+		<view class="search-item-area">{{item.message}}</view>
+		<view>{{item.address}}</view>
+		<view>{{item.contact}}</view>
+		
+	</view>
+</view>
+
+<view class="search-list" wx:else>
+	<view class="search-item">sorry，暂无相关信息</view>
+</view>
